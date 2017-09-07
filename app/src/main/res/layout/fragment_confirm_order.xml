@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_buy"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_l"
+        android:layout_alignParentBottom="true"
+        android:background="@color/red"
+        android:text="去付款"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_l" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_buy">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/margin_xl">
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="张三"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_l" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_l"
+                    android:layout_toRightOf="@id/tv_user_name"
+                    android:text="17826866809"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_l" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_user_name"
+                    android:layout_marginTop="@dimen/margin_l"
+                    android:text="杭州市滨江区江南大道3888号"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_l" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xl"
+                android:background="@color/white"
+                android:padding="@dimen/margin_xl">
+
+                <ImageView
+                    android:id="@+id/iv_pic"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"/>
+
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="x1"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_l" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_l"
+                    android:layout_marginRight="@dimen/margin_l"
+                    android:layout_toLeftOf="@id/tv_count"
+                    android:layout_toRightOf="@id/iv_pic"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_l" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_name"
+                    android:layout_marginLeft="@dimen/margin_l"
+                    android:layout_marginTop="@dimen/margin_l"
+                    android:layout_toRightOf="@id/iv_pic"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_l" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xl"
+                android:background="@color/white"
+                android:padding="@dimen/margin_xl">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商品总金额："
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_l" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text1"
+                    android:layout_marginTop="@dimen/margin_l"
+                    android:text="运费："
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_l" />
+
+                <TextView
+                    android:id="@+id/tv_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="214.00元"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_size_l" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tv_amount"
+                    android:layout_marginTop="@dimen/margin_l"
+                    android:text="0元"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_size_l" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_stage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xl"
+                android:background="@color/white"
+                android:padding="@dimen/margin_xl">
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SunyardCredit支付（分期可选）" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text2"
+                    android:layout_marginTop="@dimen/margin_l"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radio1"
+                        android:layout_width="@dimen/pay_stage"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stage_bg_selector"
+                        android:button="@null"
+                        android:padding="@dimen/margin_m"
+                        android:text="112x3期（0手续费）"
+                        android:textColor="@color/text_black" />
+
+                    <RadioButton
+                        android:id="@+id/radio2"
+                        android:layout_width="@dimen/pay_stage"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_l"
+                        android:background="@drawable/stage_bg_selector"
+                        android:button="@null"
+                        android:padding="@dimen/margin_m"
+                        android:text="112x3期（0手续费）"
+                        android:textColor="@color/text_black" />
+
+                    <RadioButton
+                        android:id="@+id/radio3"
+                        android:layout_width="@dimen/pay_stage"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_l"
+                        android:background="@drawable/stage_bg_selector"
+                        android:button="@null"
+                        android:padding="@dimen/margin_m"
+                        android:text="112x3期（0手续费）"
+                        android:textColor="@color/text_black" />
+
+                    <RadioButton
+                        android:id="@+id/radio4"
+                        android:layout_width="@dimen/pay_stage"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_l"
+                        android:background="@drawable/stage_bg_selector"
+                        android:checked="true"
+                        android:button="@null"
+                        android:padding="@dimen/margin_m"
+                        android:text="现金支付"
+                        android:textColor="@color/text_black" />
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>
