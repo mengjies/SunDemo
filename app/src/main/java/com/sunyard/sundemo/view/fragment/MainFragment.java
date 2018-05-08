@@ -1,6 +1,5 @@
 package com.sunyard.sundemo.view.fragment;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -18,7 +17,7 @@ import com.sunyard.sundemo.activity.DetailActivity;
 import com.sunyard.sundemo.common.base.BaseFragment;
 import com.sunyard.sundemo.common.utils.JsonUtils;
 import com.sunyard.sundemo.contract.MainContract;
-import com.sunyard.sundemo.model.bean.SunBean;
+import com.sunyard.sundemo.model.http.bean.SunBean;
 import com.sunyard.sundemo.view.adapter.CommodityAdapter;
 import com.sunyard.sundemo.view.widget.CommonView;
 import com.zhy.adapter.recyclerview.wrapper.LoadMoreWrapper;

@@ -20,7 +20,7 @@ import com.sunyard.sundemo.common.base.BaseFragment;
 import com.sunyard.sundemo.common.utils.DisplayUtils;
 import com.sunyard.sundemo.common.utils.JsonUtils;
 import com.sunyard.sundemo.contract.DetailContract;
-import com.sunyard.sundemo.model.bean.SunBean;
+import com.sunyard.sundemo.model.http.bean.SunBean;
 
 import java.util.HashMap;
 import java.util.Map;

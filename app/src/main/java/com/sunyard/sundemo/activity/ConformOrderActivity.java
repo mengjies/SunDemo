@@ -2,7 +2,6 @@ package com.sunyard.sundemo.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
@@ -10,7 +9,7 @@ import com.sunyard.sundemo.R;
 import com.sunyard.sundemo.common.base.ActivityUtils;
 import com.sunyard.sundemo.common.base.BaseActivity;
 import com.sunyard.sundemo.common.utils.JsonUtils;
-import com.sunyard.sundemo.model.bean.SunBean;
+import com.sunyard.sundemo.model.http.bean.SunBean;
 import com.sunyard.sundemo.view.fragment.ConfirmOrderFragment;
 
 import butterknife.ButterKnife;

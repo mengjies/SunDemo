@@ -118,6 +118,7 @@
                     android:textSize="@dimen/text_size_l" />
 
                 <TextView
+                    android:id="@+id/text3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/text1"
@@ -127,21 +128,42 @@
                     android:textSize="@dimen/text_size_l" />
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text3"
+                    android:layout_marginTop="@dimen/margin_l"
+                    android:text="优惠价："
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_l" />
+
+                <TextView
                     android:id="@+id/tv_amount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="214.00元"
+                    android:text="214.00 元"
                     android:textColor="@color/red"
                     android:textSize="@dimen/text_size_l" />
 
                 <TextView
+                    android:id="@+id/tv_freight_charge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_below="@id/tv_amount"
                     android:layout_marginTop="@dimen/margin_l"
-                    android:text="0元"
+                    android:text="0 元"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_size_l" />
+
+                <TextView
+                    android:id="@+id/tv_vip_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tv_freight_charge"
+                    android:layout_marginTop="@dimen/margin_l"
+                    android:text="0.01 元"
                     android:textColor="@color/red"
                     android:textSize="@dimen/text_size_l" />
 

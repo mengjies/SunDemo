@@ -1,6 +1,7 @@
 package com.sunyard.sundemo.view.fragment;
 
 import android.content.DialogInterface;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
@@ -11,14 +12,15 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.sunyard.sundemo.R;
+import com.sunyard.sundemo.activity.OrderPayActivity;
 import com.sunyard.sundemo.activity.PaySuccessActivity;
 import com.sunyard.sundemo.common.base.BaseFragment;
 import com.sunyard.sundemo.common.utils.JsonUtils;
-import com.sunyard.sundemo.common.utils.ToastUtils;
-import com.sunyard.sundemo.model.bean.SunBean;
+import com.sunyard.sundemo.model.http.bean.SunBean;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -49,6 +51,13 @@ public class ConfirmOrderFragment extends BaseFragment {
     RadioButton radio3;
     @InjectView(R.id.radioGroup)
     RadioGroup radioGroup;
+    @InjectView(R.id.tv_freight_charge)
+    TextView tvFreightCharge;
+    @InjectView(R.id.tv_vip_amount)
+    TextView tvVipAmount;
+    @InjectView(R.id.rl_stage)
+    RelativeLayout rlStage;
+    private float vipAmount = 0.01f;
 
     public static ConfirmOrderFragment newInstance(String json) {
 
@@ -73,21 +82,24 @@ public class ConfirmOrderFragment extends BaseFragment {
         //init data
         ivPic.setImageResource(commodity.imgId);
         tvName.setText(commodity.name);
-        tvPrice.setText(commodity.price + "元");
+        tvPrice.setText(commodity.price + " 元");
         float amount = commodity.price;
-        tvAmount.setText(amount + "元");
+        tvAmount.setText(amount + " 元");
+        tvAmount.getPaint().setFlags(Paint. STRIKE_THRU_TEXT_FLAG);
+        tvVipAmount.setText(vipAmount + " 元");
 
-        float stage1 = (float) (Math.round(amount/3*100))/100;
+        float stage1 = (float) (Math.round(amount / 3 * 100)) / 100;
         radio1.setText(stage1 + "x3期（0手续费）");
 
-        float stage2 = (float) (Math.round(amount/6*100))/100;
+        float stage2 = (float) (Math.round(amount / 6 * 100)) / 100;
         radio2.setText(stage2 + "x6期（0手续费）");
 
-        float stage3 = (float) (Math.round(amount/12*100))/100;
+        float stage3 = (float) (Math.round(amount / 12 * 100)) / 100;
         radio3.setText(stage3 + "x12期（0手续费）");
 
 
         //checked listener
+        rlStage.setVisibility(View.GONE);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
@@ -121,7 +133,8 @@ public class ConfirmOrderFragment extends BaseFragment {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_buy:
-                showPayDialog();
+                //showPayDialog();
+                OrderPayActivity.actionStart(getContext());
                 break;
         }
     }

@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 import com.sunyard.sundemo.R;
 import com.sunyard.sundemo.common.utils.DisplayUtils;
-import com.sunyard.sundemo.model.bean.SunBean;
+import com.sunyard.sundemo.model.http.bean.SunBean;
 
 import java.util.List;
 

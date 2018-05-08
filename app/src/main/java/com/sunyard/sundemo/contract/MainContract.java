@@ -2,7 +2,7 @@ package com.sunyard.sundemo.contract;
 
 import com.sunyard.sundemo.common.base.BasePresenter;
 import com.sunyard.sundemo.common.base.BaseView;
-import com.sunyard.sundemo.model.bean.SunBean;
+import com.sunyard.sundemo.model.http.bean.SunBean;
 
 import io.reactivex.Observer;
 

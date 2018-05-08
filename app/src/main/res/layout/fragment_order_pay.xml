@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="支付金额："
+            android:textColor="@color/text_black"
+            android:textSize="14sp" />
+
+        <View style="@style/MySpaceView" />
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="￥0.01"
+            android:textColor="@color/red"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="选择支付方式"
+        android:textColor="@color/text_black"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_alipay"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="16dp"
+            android:src="@mipmap/ic_pay_alipay_circle"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="支付宝"
+            android:textSize="14sp"
+            android:textColor="@color/text_black"/>
+
+        <View style="@style/MySpaceView" />
+
+        <RadioButton
+            android:id="@+id/rb_alipay"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="16dp"
+            android:clickable="false"
+            android:button="@null"
+            android:background="@drawable/pay_mode_rb_selector"/>
+
+    </LinearLayout>
+
+    <View style="@style/MyDivider" />
+
+    <LinearLayout
+        android:id="@+id/ll_wechat"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="16dp"
+            android:src="@mipmap/ic_pay_wechat_cricle"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="微信支付"
+            android:textSize="14sp"
+            android:textColor="@color/text_black"/>
+
+        <View style="@style/MySpaceView" />
+
+        <RadioButton
+            android:id="@+id/rb_wechat"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="16dp"
+            android:clickable="false"
+            android:button="@null"
+            android:background="@drawable/pay_mode_rb_selector"/>
+
+    </LinearLayout>
+
+    <View style="@style/MySpaceView" />
+
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_margin="16dp"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:background="@drawable/submit_btn_red"
+        android:text="确认支付"
+        android:textColor="@color/white"
+        android:textSize="14dp"/>
+
+</LinearLayout>

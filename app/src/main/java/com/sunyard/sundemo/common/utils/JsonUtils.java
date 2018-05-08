@@ -9,6 +9,8 @@ import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.List;
 
+import okhttp3.RequestBody;
+
 public class JsonUtils {
 
     private static Gson gson = new Gson();
@@ -48,5 +50,14 @@ public class JsonUtils {
        /* java.lang.reflect.Type type=new TypeToken<T[]>(){}.getType();*/
         T[] arr = new Gson().fromJson(json, clazz);
         return Arrays.asList(arr);
+    }
+
+    /**
+     * Json转RequestBody
+     * @param json
+     * @return
+     */
+    public static RequestBody toBody(String json) {
+        return RequestBody.create(okhttp3.MediaType.parse("application/json; charset=utf-8"), json);
     }
 }

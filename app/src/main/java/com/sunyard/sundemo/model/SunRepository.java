@@ -1,7 +1,10 @@
 package com.sunyard.sundemo.model;
 
 import com.sunyard.sundemo.R;
-import com.sunyard.sundemo.model.bean.SunBean;
+import com.sunyard.sundemo.common.utils.JsonUtils;
+import com.sunyard.sundemo.model.http.bean.RspBase;
+import com.sunyard.sundemo.model.http.bean.SunBean;
+import com.sunyard.sundemo.model.http.ApiClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,5 +39,23 @@ public class SunRepository {
                 return rspCommodityList;
             }
         });
+    }
+
+    /**
+     * 创建订单
+     * @param json
+     * @return
+     */
+    public Observable<RspBase<SunBean.RspCreateOrder>> createOrder(String json) {
+        return ApiClient.orderService.createOrder(JsonUtils.toBody(json));
+    }
+
+    /**
+     * 确认订单支付结果
+     * @param json
+     * @return
+     */
+    public Observable<RspBase<SunBean.RspVerifyPayResult>> verifyPayResult(String json) {
+        return ApiClient.orderService.verifyPayResult(JsonUtils.toBody(json));
     }
 }
